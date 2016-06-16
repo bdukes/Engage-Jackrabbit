@@ -106,6 +106,7 @@ updateFromChild ( scriptRow, _, parentMsg ) model =
 
         ParentMsg.RefreshScripts scripts ->
             let
+                -- TODO: don't overwrite rows that are being edited
                 ( scriptRows, lastScriptRowId ) =
                     scripts
                         |> makeScriptRows model.lastScriptRowId model.httpInfo model.providers model.localization
