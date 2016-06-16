@@ -48,4 +48,5 @@ viewErrorMessage errorMessage =
             emptyElement
 
         Just message ->
+            -- TODO : make closeable
             div [ class "dnnFormMessage dnnFormValidationSummary" ] [ text message ]
